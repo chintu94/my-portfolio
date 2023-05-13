@@ -1,0 +1,29 @@
+nav{
+    width: 100vw;
+    height: 5rem;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .home-key{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .pro-pic{
+            height: 3rem;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+
+        li{
+            cursor: pointer;
+        }
+    }
+}
