@@ -1,0 +1,115 @@
+@mixin animatePercent($type) {
+  animation: $type  1s linear 10ms forwards;
+  @keyframes #{$type} {
+    100%{
+      @if $type == js {
+        width: 75%;
+      } @else if $type == html {
+        width: 90%;
+      } @else if $type == css {
+        width: 80%;
+      } @else if $type == ts {
+        width: 70%;
+      } @else if $type == react {
+        width: 70%;
+      } @else if $type == redux {
+        width: 85%;
+      } @else if $type == sass {
+        width: 65%;
+      } @else if $type == node {
+        width: 55%;
+      } @else if $type == mongo {
+        width: 45%;
+      }
+    }
+  }
+}
+.skills-section-grid{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  h2{
+    margin-bottom: 1.5rem;
+  }
+  .dev{
+    .dev-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .skill-card{
+      min-width: 22rem;
+      // border: 1px solid black;
+      box-shadow: 0px 0px 10px 5px #d2c7c7af;
+      border-radius: .5rem;
+      padding: .5rem 1rem;
+
+  
+      .skill-bar{
+        position: relative;
+        background-color: #959595;
+        border-radius: .5rem;
+        margin: 1rem .5rem;
+        height: .5rem;
+        width: 100%;
+        display: flex;
+  
+        .progress{
+          display: block;
+          border-radius: inherit;
+          width: 0;
+          height: .5rem;
+          background-color: rgb(205, 0, 0);
+          &.html {
+            @include animatePercent(html);
+          }
+          &.js {
+            @include animatePercent(js);
+          }
+          &.css {
+            @include animatePercent(css);
+          }
+          &.ts {
+            @include animatePercent(ts);
+          }
+          &.react {
+            @include animatePercent(react);
+          }
+          &.redux {
+            @include animatePercent(redux);
+          }
+          &.sass {
+            @include animatePercent(sass);
+          }
+          &.node {
+            @include animatePercent(node);
+          }
+          &.mongo {
+            @include animatePercent(mongo);
+          }
+        }
+  
+        span{
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 1.8rem;
+          width: 1.8rem;
+          border-radius: 50%;
+          font-size: 0.7em;
+          background-color: #333;
+          float: right;
+          color: #ececec;
+          top: -0.6rem;
+          left: -0.5rem;
+        }
+      }
+    }
+  }
+
+  .tools{
+    ul{
+      list-style: none;
+    }
+  }
+}

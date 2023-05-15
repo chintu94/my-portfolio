@@ -2,23 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 0;
-  font-size: 1em;
-  font-weight: normal;
-  font-style: normal;
-  border: 0;
-  text-decoration: none;
-  list-style-type: none
 }
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  /* color-scheme: light dark; */
-
+  font-size: 1.2em;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  /* background-color: rgb(15, 158, 11); */
+  width: min(calc(90% - 2rem), 90rem);
+  min-height: fit-content;
+  margin-inline: auto;
+  padding-top: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
 }

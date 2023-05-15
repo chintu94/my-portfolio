@@ -1,0 +1,18 @@
+.home-page-head{
+  display: flex;
+  align-items: center;
+  min-height: 40rem;
+
+  .intro-text{
+    h1{
+      font-size: clamp(2em, 1em + 10vw, 5em);
+    }
+    p{
+      font-size: clamp(1em, .7em + 10vw, 1.5em);
+    }
+  }
+
+  .intro-svg{
+    // width: 30rem;
+  }
+}
