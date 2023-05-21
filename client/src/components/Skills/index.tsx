@@ -15,6 +15,7 @@ function Skills() {
           <ul className="dev-list">
             {skills.map(({ name, percent, type, icon }) => (
               <SkillCircle
+                key={type}
                 name={name}
                 percent={percent}
                 type={type}
@@ -30,7 +31,7 @@ function Skills() {
           </h2>
           <div className="test-types">
             {testing.map(({ type, className, tools}) => (
-              <div className={className}>
+              <div className={className} key={type}>
                 <h4>{type}</h4>
                 <ul>
                   {tools.map(tool => <li>{tool}</li>)}
@@ -47,7 +48,7 @@ function Skills() {
         </h2>
         <ul>
           {tools.map(({ name, icon }) => (
-            <li>
+            <li key={name}>
               <img src={icon} alt={name} />
               <span>{name}</span>
             </li>

@@ -4,3 +4,7 @@ export interface skillCardType {
     type: string,
     icon: string,
 }
+export interface mouse {
+    x: number | undefined,
+    y: number | undefined,
+}

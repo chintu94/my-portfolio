@@ -1,8 +1,10 @@
+import Canvas from "../Canvas";
 import "./style.scss";
 
 function HomePage() {
   return (
     <section className="container home">
+      <Canvas/>
       <div className="home-page-head">
         <div className="intro-text">
           <h1>Hi, I'm Chin2</h1>

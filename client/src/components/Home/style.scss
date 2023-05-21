@@ -1,18 +1,24 @@
-.home-page-head{
-  display: flex;
-  align-items: center;
-  min-height: 40rem;
-
-  .intro-text{
-    h1{
-      font-size: clamp(2em, 1em + 10vw, 5em);
+.home{
+  .home-page-head{
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    min-height: 40rem;
+    color: #fff;
+  
+    .intro-text{
+      h1{
+        font-size: clamp(2em, 1em + 10vw, 5em);
+      }
+      p{
+        font-size: clamp(1em, .7em + 10vw, 1.5em);
+      }
     }
-    p{
-      font-size: clamp(1em, .7em + 10vw, 1.5em);
+  
+    .intro-svg{
+      // width: 30rem;
     }
-  }
-
-  .intro-svg{
-    // width: 30rem;
   }
 }
