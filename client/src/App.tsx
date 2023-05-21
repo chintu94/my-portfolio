@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import './App.scss'
-import HomePage from './components/Home'
-import NavBar from './components/NavBar'
-import About from "./components/About";
-import Skills from "./components/Skills";
+import {
+  HomePage, NavBar, About,
+  Experience, Skills,
+} from "./components";
+
+
 function App() {
 
 
@@ -17,8 +19,12 @@ function App() {
           <Route path="/" element={<HomePage/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/skills" element={<Skills/>} />
+          <Route path="/experience" element={<Experience/>} />
         </Routes>
       </main>
+      <footer>
+        Copyright @ Chintu
+      </footer>
     </>
   )
 }

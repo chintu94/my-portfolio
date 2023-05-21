@@ -1,31 +1,57 @@
-import { skills } from "../../constants";
-import SkillCard from "./skillCard";
+import { skills, tools, testing } from "../../constants";
+import SkillCircle from "./SkillCircle";
+import { setting, testing as testIcon, tool } from "../../assets/icons";
+import './styles.scss';
 
 function Skills() {
   return (
-    <section className="container skills-section-grid">
-      <div className="dev">
-        <h2>DEVELOPMENT</h2>
-        <div className="dev-list">
-          {skills.map(({ name, percent, type }) => (
-            <SkillCard
-              name={name}
-              percent={percent}
-              type={type}
-            />
-          ))}
+    <section className="skills-section-grid container">
+      <div className="dev-test">
+        <div className="dev">
+          <h2>
+            <img src={setting} alt="dev" className="black-png" />
+            <span>DEVELOPMENT</span>
+          </h2>
+          <ul className="dev-list">
+            {skills.map(({ name, percent, type, icon }) => (
+              <SkillCircle
+                name={name}
+                percent={percent}
+                type={type}
+                icon={icon}
+              />
+            ))}
+          </ul>
+        </div>
+        <div className="tests">
+          <h2>
+            <img src={testIcon} alt="Testing" />
+            <span>Testing</span>
+          </h2>
+          <div className="test-types">
+            {testing.map(({ type, className, tools}) => (
+              <div className={className}>
+                <h4>{type}</h4>
+                <ul>
+                  {tools.map(tool => <li>{tool}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="tools">
-        <h2>TOOLS</h2>
+        <h2>
+          <img src={tool} alt="dev" className="black-png" />
+          <span>TOOLS</span>
+        </h2>
         <ul>
-          <li>Git/Github</li>
-          <li>Command Line</li>
-          <li>Chrome DevTools</li>
-          <li>Redux DevTools</li>
-          <li>Postman</li>
-          <li>VS code</li>
-          <li>Jenkins</li>
+          {tools.map(({ name, icon }) => (
+            <li>
+              <img src={icon} alt={name} />
+              <span>{name}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
